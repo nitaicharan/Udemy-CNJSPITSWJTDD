@@ -15,16 +15,6 @@ class Food {
         this.currentValues = { ...baseValues }
     }
 
-    private validateFoodAmount(amount: number) {
-        if (amount <= 0)
-            throw new InvalidFoodAmountError(amount);
-    }
-
-    private validateFoodName(name: string) {
-        if (!name.length)
-            throw new EmptyFoodNameError();
-    }
-
     getBaseValues() {
         return this.baseValues;
     }
@@ -44,6 +34,21 @@ class Food {
     changeAmount(amount: number) {
         this.validateFoodAmount(amount);
         this.currentValues.amount = amount;
+        this.currentValues.calories = this.calculateCaloriesFoodAmount();
+    }
+
+    private validateFoodAmount(amount: number) {
+        if (amount <= 0)
+            throw new InvalidFoodAmountError(amount);
+    }
+
+    private validateFoodName(name: string) {
+        if (!name.length)
+            throw new EmptyFoodNameError();
+    }
+
+    private calculateCaloriesFoodAmount() {
+        return Math.ceil(this.currentValues.amount * this.baseValues.calories / this.baseValues.amount);
     }
 }
 
