@@ -1,8 +1,9 @@
 import EmptyFoodNameError from './errors/EmptyFoodNameError';
 import InvalidFoodAmountError from './errors/InvalidFoodAmountError';
-import Food from './Food'
+import Food from './Food';
+import Units from './Units';
 
-describe('', () => {
+describe('Food', () => {
     test('create', () => {
         const baseValues = {
             amount: 100,
@@ -12,11 +13,11 @@ describe('', () => {
             calories: 124,
         };
 
-        const food = new Food('rice', 'g', baseValues);
+        const food = new Food('rice', Units.GRAM, baseValues);
 
         expect(food).toBeDefined();
         expect(food.getName()).toEqual('rice');
-        expect(food.getUnit()).toEqual('g');
+        expect(food.getUnit()).toEqual(Units.GRAM);
         expect(food.getBaseValues().amount).toEqual(100);
         expect(food.getBaseValues().carbohydrate).toEqual(40);
         expect(food.getBaseValues().protein).toEqual(65);
@@ -33,7 +34,7 @@ describe('', () => {
             calories: 124,
         };
 
-        expect(() => new Food('', 'g', baseValues)).toThrowError(EmptyFoodNameError)
+        expect(() => new Food('', Units.GRAM, baseValues)).toThrowError(EmptyFoodNameError)
     });
 
     test('create food with zero amount', () => {
@@ -45,7 +46,7 @@ describe('', () => {
             calories: 124,
         };
 
-        expect(() => new Food('rise', 'g', baseValues)).toThrowError(InvalidFoodAmountError)
+        expect(() => new Food('rise', Units.GRAM, baseValues)).toThrowError(InvalidFoodAmountError)
     });
 
     test('create food and change amount', () => {
@@ -57,7 +58,7 @@ describe('', () => {
             calories: 124,
         };
 
-        const food = new Food('rice', 'g', baseValues);
+        const food = new Food('rice', Units.GRAM, baseValues);
         food.changeAmount(23);
 
         expect(food.getCurrentValues().amount).toEqual(23)
@@ -72,7 +73,7 @@ describe('', () => {
             calories: 124,
         };
 
-        const food = new Food('rice', 'g', baseValues);
+        const food = new Food('rice', Units.GRAM, baseValues);
 
         expect(() => food.changeAmount(-23)).toThrowError(InvalidFoodAmountError)
     });
@@ -86,7 +87,7 @@ describe('', () => {
             calories: 124,
         };
 
-        const food = new Food('rice', 'g', baseValues);
+        const food = new Food('rice', Units.GRAM, baseValues);
         food.changeAmount(87);
         expect(food.getCurrentValues().calories).toEqual(108);
     });
