@@ -1,4 +1,5 @@
 import EmptyFoodNameError from "./errors/EmptyFoodNameError";
+import InvalidFoodAmountError from "./errors/InvalidFoodAmountError";
 import Nutritions from "./Notritions";
 
 class Food {
@@ -8,6 +9,7 @@ class Food {
         private readonly baseAmount: Nutritions,
     ) {
         if (!name.length) throw new EmptyFoodNameError();
+        if (baseAmount.amount <= 0) throw new InvalidFoodAmountError(baseAmount.amount);
     }
 
     getBaseValues() {
