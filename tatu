@@ -1,0 +1,71 @@
+[33mcommit a5569fcd096ce0035972e60a19f4a75c89499359[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Tue Mar 8 05:49:34 2022 -0500
+
+    14. Current values of Food
+
+[33mcommit ee5c8e8710edec46127a02510c5c29cd5d4e8828[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Tue Mar 8 05:43:12 2022 -0500
+
+    13. Refactor: extract validations from the constructor
+
+[33mcommit 33e3bbffb94e4668b3da6893478ad77f26ffbcf0[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Tue Mar 8 05:38:08 2022 -0500
+
+    12. Invalid amount error in Food
+
+[33mcommit a82459fca18cfc526db107bc939ad09c4cfcd03d[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Tue Mar 8 05:27:40 2022 -0500
+
+    11. Error handling and invalid name error in Food
+
+[33mcommit 135695c66865fb0ffc324f302966c0e67edd5454[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 03:18:39 2022 -0500
+
+    10. Add base values to Food
+
+[33mcommit 0338bd6a44974959ee74cdbdf06e630227337c15[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:59:19 2022 -0500
+
+    9. Add name and unit to Food
+
+[33mcommit 629a2e7640385f2d0dc210905e58d792adbb2165[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:52:48 2022 -0500
+
+    8. First test case and Food class
+
+[33mcommit b71723370ba2e2995b2dca458d53c006e263e0ce[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:45:46 2022 -0500
+
+    7. .gitignore and .npmignore
+
+[33mcommit a9c059ced46119248882c9c83df5201fff1745f9[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:41:31 2022 -0500
+
+    6. Jest config for tests
+
+[33mcommit 6d399cecf70756cda564a960d73f169d723cbdea[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:36:31 2022 -0500
+
+    5. Install development dependencies
+
+[33mcommit b3d7bf48b98d30489fffe8752ac73f1a5ba19ec1[m
+Author: Nitai Charan <nitai.pereira@webera.com>
+Date:   Sun Mar 6 02:36:18 2022 -0500
+
+    4. Add tsconfig.json as TypeScript configuration
+
+[33mcommit f8e7164a3cab098429cb5eac12caa099b06e3183[m
+Author: Nitai Charan <nitaicharan@gmail.com>
+Date:   Sun Mar 6 02:22:19 2022 -0500
+
+    3. Create and clone git repository
