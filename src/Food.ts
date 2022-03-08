@@ -3,13 +3,16 @@ import InvalidFoodAmountError from "./errors/InvalidFoodAmountError";
 import Nutritions from "./Notritions";
 
 class Food {
+    private currentValues: Nutritions;
+
     constructor(
         private readonly name: string,
         private readonly unit: string,
-        private readonly baseAmount: Nutritions,
+        private readonly baseValues: Nutritions,
     ) {
         this.validateFoodName(name);
-        this.validateFoodAmount(baseAmount);
+        this.validateFoodAmount(baseValues);
+        this.currentValues = { ...baseValues }
     }
 
     private validateFoodAmount(baseAmount: Nutritions) {
@@ -23,15 +26,19 @@ class Food {
     }
 
     getBaseValues() {
-        return this.baseAmount;
+        return this.baseValues;
     }
 
-    getUnit(): any {
+    getUnit() {
         return this.unit;
     }
 
     getName() {
         return this.name;
+    }
+
+    getCurrentValuesValues() {
+        return this.currentValues;
     }
 }
 
